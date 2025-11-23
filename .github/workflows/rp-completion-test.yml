@@ -1,0 +1,16 @@
+name: release-please completion test
+
+on:
+  workflow_run:
+    workflows: ["release-please"]
+    types:
+      - completed
+
+jobs:
+  testy:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: asd
+        run: echo "Workflow run!"
