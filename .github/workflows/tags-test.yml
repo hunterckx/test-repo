@@ -1,0 +1,17 @@
+name: tags test
+
+on:
+  push:
+
+jobs:
+  testyasd:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+  
+      - name: asdasd
+        run: echo "asd a"; git tag; echo "asd b"
