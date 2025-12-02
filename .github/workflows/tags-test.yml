@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: main
+          fetch-depth: 0
   
       - name: asdasd
         run: echo "asd a"; git tag; echo "asd b"
